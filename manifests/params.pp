@@ -163,6 +163,12 @@ class java::params {
         'jre' => { 'package' => $jre_package, },
       }
     }
+    'FreeBSD': {
+      $java = {
+        'jdk' = { 'package' => 'openjdk', },
+        'jre' = { 'package' => 'openjdk', },
+      }
+    }
     default: { fail("unsupported platform ${::osfamily}") }
   }
 }
